@@ -2,12 +2,11 @@ import s from "./Contact.module.css";
 import symbol from "../../assets/symbol-defs.svg";
 import clsx from "clsx";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
+import { deleteContact } from "../../redux/contactsOps";
 
 const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
   const handleDelete = (id) => {
-    console.log(id);
     dispatch(deleteContact(id));
   };
 
